@@ -1,1 +1,507 @@
-Placeholder
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gentrack</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand);
+      @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans+Condensed:300&subset=cyrillic);
+
+      body {
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: normal;
+
+      }
+      ul {
+        list-style-type: none;
+      }
+      a:visited {
+        color: #29B6F6;
+      }
+      a:link {
+        color: #29B6F6;
+      }
+      .left-column {
+        width: 50%;
+        float: left;
+      }
+      .left-column-thin {
+        width: 40%;
+        float: left;
+      }
+      .right-column {
+        width: 50%;
+        float: right;
+      }
+      .right-column-thick{
+        width: 60%;
+        float: right;
+      }
+      .middle {
+        text-align: center;
+      }
+      .materialAsphalt {
+        background-color: #37474F;
+        color: #29B6F6;
+        font-size: 125%;
+      }
+      .materialAsphaltDarker {
+        color: #37474F;
+        font-size: 125%;
+      }
+      .animation{
+        height: inherit;
+        width: inherit;
+      }
+      /*Fade in and out transition*/
+      .remark-fading { z-index: 9; }
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: center, middle, materialAsphalt
+
+# Gentrack
+
+---
+class: materialAsphalt
+
+# Повестка
+
+1. Проблема
+2. Сущестувющие решение
+  * Sproxil
+  * RFID
+  * ИС "Маркировка"
+3. Наше решение
+4. Финансы
+5. Использованные источники
+
+---
+class: materialAsphalt
+
+#Проблема
+
+.left-column[
+
+НПЛФК
+>Некондиционная
+>
+>Поддельная
+>
+>Ложно маркированная
+>
+>Фальсифицированная
+>
+>Контрафактная
+
+]
+
+.right-column[
+<br><br><br>
+НПЛФК Медицинская Продукция из себя представляет крупную проблему не только для производителей, но и для потребителей этих лекарств
+
+]
+
+---
+class: materialAsphalt
+
+# Проблема на рынке лекарственных средств
+
+## В мире:
+
+- Приблизительно 10-30% лекарств покупаемых в развивающихся странах - контрафакт;
+
+- Весь рынок контрафактных медикаментов оценивается экспертами в 200 миллиардов долларов;
+
+- Глобальный рынок анти-контрафактной упаковки 107.26 миллиардов долларов в 2016 году с прогнозируемым ростом до 206.57 миллиардов долларов до 2021 года, с совокупным среднегодовым темпом роста около 14%.
+
+---
+class: materialAsphalt
+
+# Проблема на рынке лекарственных средств
+
+## В России:
+
+- Порядка 15% медикаментов, продаваемых в России, являются подделками и могут представлять опасность для здоровья людей;
+
+- Рост объёма контрафакта в России около 10-15%;
+
+- В 2016 году усилиями Росздравнадзора: изъято из обращения и уничтожено 7 243 018 упаковок недоброкачественных и фальсифицированных лекарственных средств.
+
+---
+class: materialAsphalt
+
+# Почему это проблема?
+
+[//]: # (### Некондиционная/поддельная/ложно маркированная/ фальсифицированная/контрафактная (НПЛФК) медицинская продукция:)
+
+1. создает неприемлемый риск для здоровья населения.
+2. приводит к потере доверия к лекарственным препаратам.
+3. проблема затрагивает все регионы мира.
+4. фигурируют противомалярийные препараты и антибиотики.
+5. фальсифицируют как препараты-генерики, так и оригинальные лекарственные препараты;
+6. подделывают очень дорогостоящие средства против рака, так и самые дешевые препараты для лечения боли.
+7. такую продукцию можно найти как на неконтролируемых веб-сайтах, так и в аптеках, клиниках и больницах.
+
+---
+class: materialAsphalt, middle
+
+# Почему существующие решения не смогут решить проблему?
+
+---
+class: materialAsphalt
+
+# Sproxil
+
+.left-column[
+Локальное решение, массовая сериализация лекарств, отклеивание защитной пленки кода,  отправление смс, проверка на единой базе данных компании.
+]
+
+.right-column[
+1. Нанесение защитной плёнки - дорого;
+
+2. Угроза неавторизованного входа в систему и подделку единственной базы данных;
+
+3. Возможно симулировать работу оригинальной системы, создавая фейковые сайты, колл-центры и т.д.
+]
+
+---
+class: materialAsphalt
+
+# Radio Frequency Identification (RFID)
+
+.left-column[
+Считывание данных с помощью радиосигналов с RFID меток.
+]
+
+.right-column[
+1. Основной минус, которой также послужил причиной отвержения сестемы на территории РФ - высокая стоимость меток;
+
+2. Непрактично для дешевых лекарственных препаратов.
+
+3. Больше чем 1 RFID метка может ответить на запрос одновременно.
+]
+
+---
+class: materialAsphalt
+
+# ИС “МАРКИРОВКА”
+.left-column[
+Маркировки товаров контрольными знаками Datamatrix лекарственных препаратов для медицинского применения.
+]
+.right-column[
+1. Возможно симулировать работу оригинальной системы, создавая фейковые сайты, колл-центры и т.д.;
+
+2. Угроза неавторизованного входа в систему и подделку единственной базы данных;
+
+3. Работает только на территории РФ, не является мировым стандартом.
+]
+
+---
+class: materialAsphalt, middle
+
+# Gentrack
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+]
+.right-column-thick[
+<br><br><br><br>
+В сердце Gentrack SaaS (программное обеспечение как услуга) Track and trace (процессы определения настоящих и прошлых мест нахождения продукции) лежит технология Блокчейн.
+
+Это послужит распределенной базой данных с использованием блоков для обозначения транзакций - изменения местонахождения предметов, передачи “из рук в руки”, от одной компании к другой.
+]
+???
+Need to clarify a few more things:
+>System will use permissioned ledger tech meaning we will know who will be running the nodes and using the system (potentially preventing the problem of fake nodes/data)
+>
+>
+>
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+]
+.right-column-thick[
+<br><br><br><br>
+Gentrack будет предоставлять систему неподвластную коррупции и порче/подделыванию данных благодаря хранению цепочек блоков не в одном месте, а у некоторого количества контрагентов, при этом обеспечивая кристальную прозрачность.
+
+Это сделать мошенничество невероятно сложным и простым для распознания, а вовлечение конечных покупателей позволит фармакологическим компаниям использовать открытость и подтверждаемость для усиления своего брэнда.
+]
+
+---
+class: materialAsphalt
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br><br>
+Генерация блока и нанесение QR/Datamatrix кода на упаковку лекарств, кодирую необходимую информацию согласно требованиям законодательства и условиям фармакологических компаний, учитывая экономическую рентабельность.
+
+Это нужно, чтобы отслеживает наименьший объем продаваемого продукта, что улучшит и контроль и прозрачность.
+]
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br>
+```
+Block 0
+
+1.     Индекс: 0
+2.     Время генерации: 17:15 1/1/2017
+3.     Информация о блоке = Изготовление (Регистрационный номер;
+       Компания; Место; Номер партии;
+       Дата изготовления): П N012084/01;
+       Сандоз д.д.; Лек д.д., Менгеш, Словения; Партия 001;
+       17:14 1/1/2017
+4.     Хеш: 0xea34ad…55
+5.     Предыдущий Хеш: 0
+```
+]
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br><br>
+Далее идёт первая транзакция: передача логистической компании.
+
+Добавление следующего блока, сканирование QR/Datamatrix кода серии лекарств.
+
+```
+Block 1
+
+1.     Индекс: 1
+2.     Время генерации: 17:17 1/1/2017
+3.     Информация о блоке = Получение транспортной компанией
+       (Компания; Место; Время; Номер транспорта) : ЛогистическаяКомпания01;
+       Лек д.д., Менгеш, Словения; 17:16 01/01/2017; Машина ИД_0101
+4.     Хеш: 0xf6e1da2…deb
+5.     Предыдущий Хеш: 0xea34ad…55
+```
+]
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br><br>
+После доставки на склад - регистрация на складе.
+
+Добавление следующего блока, сканирование QR/Datamatrix кода серии лекарств.
+
+```
+Block 2
+
+1.     Индекс: 2
+2.     Время генерации: 17:19 1/1/2017
+3.     Информация о блоке = Принятие на склад (Компания; Место;
+       Время; Отдел склада):  Хранение01_инк; Веровшкова 100,
+       999 Любляна, Словения; 17:19 1/1/2017; Комната0123)
+4.     Хеш: 0x9327eb1b…36a21
+5.     Предыдущий Хеш: 0xf6e1da2…deb
+```
+И так далее.
+]
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br><br>
+Конечной операцией с цепью созданных блоков будет сканирование QR/Datamatrix кода при продаже конечному покупателю в месте розничной торговли, где покупатель сможет отследить полный путь упаковки - от завода до аптеки.
+
+Таким образом, заинтересованные партии смогут удостовериться в оригинальности продукта.
+]
+
+---
+class: materialAsphalt
+
+.left-column-thin[
+# Gentrack
+
+## Принцип работы
+]
+.right-column-thick[
+<br><br><br><br>
+Если же код был сканирован в месте, которое не зарегистрировано в системе заранее, мы сможем отследить примерное место и время кражи партии.
+
+Это будет невозможно подделать, так как эта транзакция не будет подтверждена и не была предусмотрена, а для изменения всей цепочки блоков придется взломать несколько копий цепочки в базах нескольких контрагентов.
+]
+
+---
+class: materialAsphalt, middle
+
+# Финансы
+
+---
+class: materialAsphalt
+
+# Планируемый основной поток доходов
+
+.left-column[
+После разработки рабочей версии мы намерены продавать сервис:
+]
+
+.right-column[
+>Фармакологическим компаниям
+>
+>Транспортным компаниям
+>
+>Экспортерам
+>
+>Импортерам
+]
+---
+class: materialAsphalt
+
+# Первый раунд инвестиций
+
+.left-column-thin[
+В первом раунде мы намерены найти финансирование в размере 7 000 000 рублей, что даст нам возможность работать в течение 5-6 месяцев.
+]
+.right-column[
+Деньги пойдут на разработку рабочего прототипа:
+
+Найм и оплата заработной платы специалиста на должность главы технологического отдела;
+
+Найм и оплата заработной платы команды разработчиков разработчиков из 8-10 человек;
+
+Оплата принятия участия в парижской международной конференции Pharmapack;
+
+Закупку рабочего оборудования;
+
+Aдминистративные расходы.
+]
+
+---
+class: materialAsphalt
+
+# Mысли по дальнейшему развития компании
+
+Расширение сервиса для контроля оборота товаров других индустрий;
+
+Упаковка лекарственных средств;
+
+Онлайн площадка для продаж лекарств и БАДов;
+
+Выпуск токенов на блокчейне после утверждения регуляций государством.
+
+---
+class: materialAsphalt
+
+# Основатели и доли
+
+.middle[
+<br>
+В настоящий момент между основателями АО “ГИПЕРКУБ” существует договоренность о равном разделе долей компании.
+<br><br>
+
+.left-column[
+Глава разработки
+
+Егор Григорьев - 50%
+]
+.right-column[
+Генеральный директор
+
+Анатолий Забелин - 50%
+]]
+
+---
+class: materialAsphalt, middle
+
+# Контакты
+
+.left-column[
+## Егор Григорьев
+
+egor.grigorev@gmail.com
+
++44 7795 220065
+]
+
+.right-column[
+## Анатолий Забелин
+
+anatolyzabelin01@gmail.com
+
++7 915 313 3157
+]
+
+---
+class: materialAsphalt
+
+# Использованные источники
+
+
++ http://www.roszdravnadzor.ru/documents/38680
++ http://ec.europa.eu/health//sites/health/files/files/counterf_par_trade/doc_publ_consult_200803/83_international_authentication_association_en.pdf
++ http://www.marketsandmarkets.com/Market-Reports/anti-counterfeit-packaging-advanced-technologies-and-global-market-129.html
++ http://www.who.int/mediacentre/factsheets/fs275/ru/
++ http://www.1sn.ru/193829.html
++ http://ec.europa.eu/internal_market/indprop/docs/conf2008/wilfried_roge_en.pdf
++ http://trade.gov/topmarkets/pdf/Pharmaceuticals_Executive_Summary.pdf
++ https://www.cdc.gov/features/counterfeitdrugs/index.html
++ http://inosmi.ru/world/20130322/207253503.html
++ http://www.vestifinance.ru/articles/50354
++ http://www.mk.ru/social/2016/01/20/kraya-so-skolami-rossiyu-zakhlestnula-epidemiya-poddelnykh-lekarstv.html
++ https://www.lilly.com/products/anti-counterfeiting
++ http://www.oecd.org/sti/ind/35650404.pdf
++ http://www.bbc.com/news/business-37470667
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9'
+      });
+
+
+    </script>
+  </body>
+</html>
