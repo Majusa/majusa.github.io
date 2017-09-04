@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gentrack</title>
+    <title>Gentracker</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Quicksand);
-      @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans+Condensed:300&subset=cyrillic);
 
       body {
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Quicksand';
+        font-weight: normal;
       }
       h1, h2, h3 {
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Quicksand';
         font-weight: normal;
-
+        font-size: 1em;
+      }
+      p {
+        font-size: 1.4em;
       }
       ul {
         list-style-type: none;
+        font-size: 1.6em;
+      }
+      li {
+        margin: 0 0 3px 0;
       }
       a:visited {
         color: #29B6F6;
@@ -27,12 +34,16 @@
       a:link {
         color: #29B6F6;
       }
+      .spacing {
+        margin-top: 80px;
+        margin-left: 20px;
+      }
       .left-column {
         width: 50%;
         float: left;
       }
       .left-column-thin {
-        width: 40%;
+        width: 33%;
         float: left;
       }
       .right-column {
@@ -40,7 +51,7 @@
         float: right;
       }
       .right-column-thick{
-        width: 60%;
+        width: 66%;
         float: right;
       }
       .middle {
@@ -49,11 +60,9 @@
       .materialAsphalt {
         background-color: #37474F;
         color: #29B6F6;
-        font-size: 125%;
       }
       .materialAsphaltDarker {
         color: #37474F;
-        font-size: 125%;
       }
       .animation{
         height: inherit;
@@ -78,64 +87,65 @@
 
 class: center, middle, materialAsphalt
 
-# Gentrack
+# Gentracker
 
 .footer[
-&copy; 2017 Гиперкуб
+&copy; 2017 Gentracker.io
 ]
 
 ---
 class: materialAsphalt
 
-# Повестка
+# Agenda
 
-1. Проблема
-2. Сущестувющие решение
-  * Sproxil
-  * RFID
-  * ИС "Маркировка"
-3. Наше решение
-4. Финансы
-5. Использованные источники
+.spacing[
+- Problems we will solve
+- How we intend to do it
+- How it will work
+- Financials
+- Future
+- Founders
+- Sources
+]
 
 ---
 class: materialAsphalt
 
-#Проблема
-
-.left-column[
-
-НПЛФК
->Некондиционная
->
->Поддельная
->
->Ложно маркированная
->
->Фальсифицированная
->
->Контрафактная
-
+.left-column-thin[
+# Problems
 ]
 
-.right-column[
+.right-column-thick[
 <br><br><br>
-НПЛФК Медицинская Продукция из себя представляет крупную проблему не только для производителей, но и для потребителей этих лекарств
-
+> 10-30% of medicine is counterfeit in developing markets
+>
+> Pharmaceutical companies are losing up to $200 000 000 000 on sales in those markets
+>
+> Inefficiencies in ensuring traceablitiy, transparency and authenticity
+>
+> Corruption
 ]
 
 ---
 class: materialAsphalt
 
-# Проблема на рынке лекарственных средств
+.left-column-thin[
+# Problems
 
-## В мире:
+## Causes
+]
 
-- Приблизительно 10-30% лекарств покупаемых в развивающихся странах - контрафакт;
-
-- Весь рынок контрафактных медикаментов оценивается экспертами в 200 миллиардов долларов;
-
-- Глобальный рынок анти-контрафактной упаковки 107.26 миллиардов долларов в 2016 году с прогнозируемым ростом до 206.57 миллиардов долларов до 2021 года, с совокупным среднегодовым темпом роста около 14%.
+.right-column-thick[
+<br><br><br>
+> Counterfeit medicine is an unacceptable risk to the health of those exposed to it
+>
+> Counterfeit medicines are global
+>
+> Leads to the loss of trust in pharmaceutical companies and products
+>
+> This in turn leads to losses in revenues and profits of pharmaceutical companies entering or trying to expand in developing regions
+>
+]
 
 ---
 class: materialAsphalt
